@@ -164,3 +164,4 @@ Sprawdź przed warsztatem:
 
 Jeśli napotkasz problem, którego nie uda Ci się rozwiązać, napisz do mnie jeszcze przed
 warsztatem. Rozwiążemy go wspólnie, żeby nie tracić czasu podczas zajęć.
+aaaaa
