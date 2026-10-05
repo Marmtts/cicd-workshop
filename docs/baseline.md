@@ -77,6 +77,24 @@ Czasy runów:
 |  Czas joba UI tests | 2m 48s | 2m 40s |
 |  Suma czasów wszystkich jobów | 3m 11s | 3m 2s |
 
+## Zadanie 06
+
+- Czas joba security - 12s
+- Całkowity czas przebiegu - 3m 14s
+- Po 9s znaleziono error
+
+- czy według Ciebie job Security powinien blokować scalenie pull requesta, czy tylko ostrzegać, oraz dlaczego:
+- - Powinien blokować scalenie Pull Requesta z powodu wpływu na bezpieczeństwo aplikacji
+
+## Zadanie 07
+
+
+| Krok | Zadanie 06 | Zadanie 07 |
+|---|---|---|
+| Czas UI tests na pull requeście | 2m 49s | 24s |
+| Czas UI tests na main | 2m 49s | 2m 27s |
+|  Całkowity czas przebiegu pull requesta| 3m 11s | 3m 2s |
+| Liczba testów UI na pull requeście | 123 | 5 |
 
 
 
