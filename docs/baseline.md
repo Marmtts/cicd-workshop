@@ -156,5 +156,17 @@ Gdy jeden z shardów failuje, reszta kontynuuje i kończy testy.
 |Czy trzeba coś pobierać	|tak	|nie|
 |Czas joba Test report|	—	|7s|
 
+## Zadanie 13
+
+|Co	|trace: 'on'|	retain-on-failure|
+|---|---|---|
+|Rozmiar playwright-report|		13.7 MB | 	894 KB|
+|Suma rozmiarów blob-report-*	|13.186 MB|	~400kB|
+
+
+- czy zapytanie do API o produkty się powiodło i co zwróciło dla produktu p-012? - Tak, kod 200 i obiekt
+- czy na stronie jest element z etykietą „Ostatnie sztuki”, czy go nie ma wcale? - nie ma
+- skoro dane są takie, jakie są, a strona wygląda tak, jak wygląda — w którym miejscu kodu szukać przyczyny? - w lokatorach
+
 
 
