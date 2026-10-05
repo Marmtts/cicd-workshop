@@ -48,3 +48,16 @@ Co na `demo/failing-unit` stało się z testami API i UI:
 ## Pomiary z kolejnych zadań
 
 Tu dopisujesz pomiary i odpowiedzi z kolejnych zadań, pod nagłówkiem z numerem zadania.
+
+##Zadanie 03
+
+Czasy runów:
+
+| Krok | Run 1 | Run 2 |
+|---|---|---|
+|  Install dependencies | 4s | 4s |
+|  Install Playwright browsers, | 8s | 0s |
+|  całkowity czas przebiegu | 3m 2s | 3m 1s |
+
+
+
