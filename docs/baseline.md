@@ -67,7 +67,15 @@ Czasy runów:
 - na co testy API i UI czekają, bo muszą, a na co tylko dlatego, że tak zdecydowaliśmy? - Czekają na build, quality, unit
 
 - czas całego przebiegu — 2m 59s
-- sumę czasów wszystkich jobów — 3m 47s	
+- sumę czasów wszystkich jobów — 3m 47s
+
+## Zadanie 05
+
+| Krok | Zadanie 04 | Zadanie 05 |
+|---|---|---|
+|  Ile razy budowana jest aplikacja | 3 | 1 |
+|  Czas joba UI tests | 2m 48s | 2m 40s |
+|  Suma czasów wszystkich jobów | 3m 11s | 3m 2s |
 
 
 
