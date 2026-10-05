@@ -128,3 +128,14 @@ Testy UI nie importują kodu aplikacji, tylko otwierają ją w przeglądarce, wi
 - łączny czas wszystkich jobów ze strony Usage - 5m 17s
 
 Gdy jeden z shardów failuje, reszta kontynuuje i kończy testy.
+
+## Zadanie 10
+
+
+| Co |PR (2 shardy)	|main (8 shardów)|	main (4 shardy, z ZADANIA 09)|
+|---|---|---|---|
+|Czas najdłuższego sharda |24s|33s|42s|
+| Łączny czas jobów (Usage)|1m 53s	|5m 6s	|3m 42s|
+|Suma testów ze shardów |5|123|123|
+| Jobów jednocześnie w szczycie||||
+
