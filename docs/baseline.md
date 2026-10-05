@@ -96,5 +96,11 @@ Czasy runów:
 |  Całkowity czas przebiegu pull requesta| 3m 11s | 3m 2s |
 | Liczba testów UI na pull requeście | 123 | 5 |
 
+## Zadanie 08
 
+Testy UI nie importują kodu aplikacji, tylko otwierają ją w przeglądarce, więc --only-changed zmiany w kodzie nie widzi. 
+
+- Zmiana tylko w README.md - 28s
+- Zmiana w src/web/	- 55s
+- Pull request bez selektywności (wynik z ZADANIA 07)	3m 46s
 
