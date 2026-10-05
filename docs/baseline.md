@@ -168,5 +168,14 @@ Gdy jeden z shardów failuje, reszta kontynuuje i kończy testy.
 - czy na stronie jest element z etykietą „Ostatnie sztuki”, czy go nie ma wcale? - nie ma
 - skoro dane są takie, jakie są, a strona wygląda tak, jak wygląda — w którym miejscu kodu szukać przyczyny? - w lokatorach
 
+## Zadanie 14
 
+||Na początku dnia	|Na koniec dnia|
+|---|---|---|
+|Cały przebieg na main|	3m 21s|	5m 45s	|
+|Cały przebieg na pull requeście|	2m 49s|	1m 10s	|
+|Czy wykrywa token w kodzie	|nie|	tak|
+|Czy jest raport, gdy testy nie przejdą	|nie|tak|
+|Liczba kontroli na pull requeście|	1	|11|
+|Czy da się scalić zmianę z czerwonym testem|tak	|nie|
 
