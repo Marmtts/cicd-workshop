@@ -149,8 +149,12 @@ Gdy jeden z shardów failuje, reszta kontynuuje i kończy testy.
 | Czy raport powstaje przy błędzie| Nie|	Tak|
 |  Czas joba UI report	|—	|21s|
 
+## Zadanie 12
 
-
+|Co	|ZADANIE 01	|Po ZADANIU 12|
+|---|---|---|
+|Czy trzeba coś pobierać	|tak	|nie|
+|Czas joba Test report|	—	|7s|
 
 
 
