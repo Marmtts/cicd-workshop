@@ -104,3 +104,38 @@ Testy UI nie importują kodu aplikacji, tylko otwierają ją w przeglądarce, wi
 - Zmiana w src/web/	- 55s
 - Pull request bez selektywności (wynik z ZADANIA 07)	3m 46s
 
+
+## Zadanie 09
+
+| Krok | workers | shardowanie |
+|---|---|---|
+| Co skaluje|procesy na jednej maszynie | liczbę maszyn|
+| Mechanizm	| workers w playwright.config.ts	| strategy.matrix + --shard|
+|  Twardy limit| rdzenie runnera |	20 jobów naraz (konto Free)|
+| Koszt w minutach | ? | ? |
+
+- - Przed:
+- czas joba UI tests - 2m 46s
+- łączny czas wszystkich jobów ze strony Usage - 4m 20s
+- - Po workers:
+- czas joba UI tests - 58s
+- łączny czas wszystkich jobów ze strony Usage - 2m 16s	
+- - Po Shardowaniu:
+- czas joba UI tests - 42s
+- łączny czas wszystkich jobów ze strony Usage -  3m 42s
+- - 8 shards:
+- czas joba UI tests - 38s
+- łączny czas wszystkich jobów ze strony Usage - 5m 17s
+
+Gdy jeden z shardów failuje, reszta kontynuuje i kończy testy.
+
+## Zadanie 10
+
+
+| Co |PR (2 shardy)	|main (8 shardów)|	main (4 shardy, z ZADANIA 09)|
+|---|---|---|---|
+|Czas najdłuższego sharda |24s|33s|42s|
+| Łączny czas jobów (Usage)|1m 53s	|5m 6s	|3m 42s|
+|Suma testów ze shardów |5|123|123|
+| Jobów jednocześnie w szczycie||||
+
