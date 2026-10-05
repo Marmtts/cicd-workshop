@@ -139,3 +139,18 @@ Gdy jeden z shardów failuje, reszta kontynuuje i kończy testy.
 |Suma testów ze shardów |5|123|123|
 | Jobów jednocześnie w szczycie||||
 
+
+## Zadanie 11
+
+
+|Co|	Przed|	Po|
+|---|---|---|
+| Liczba raportów, które trzeba otworzyć, żeby zobaczyć pełny wynik	|8 (albo 4)|	1|
+| Czy raport powstaje przy błędzie| Nie|	Tak|
+|  Czas joba UI report	|—	|21s|
+
+
+
+
+
+
