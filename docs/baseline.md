@@ -110,7 +110,7 @@ Testy UI nie importują kodu aplikacji, tylko otwierają ją w przeglądarce, wi
 | Krok | workers | shardowanie |
 |---|---|---|
 | Co skaluje|procesy na jednej maszynie | liczbę maszyn|
-| Mechanizm	workers w|playwright.config.ts	| strategy.matrix + --shard|
+| Mechanizm	| workers w playwright.config.ts	| strategy.matrix + --shard|
 |  Twardy limit| rdzenie runnera |	20 jobów naraz (konto Free)|
 | Koszt w minutach | ? | ? |
 
