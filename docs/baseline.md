@@ -114,16 +114,16 @@ Testy UI nie importują kodu aplikacji, tylko otwierają ją w przeglądarce, wi
 |  Twardy limit| rdzenie runnera |	20 jobów naraz (konto Free)|
 | Koszt w minutach | ? | ? |
 
-Przed:
+- - Przed:
 - czas joba UI tests - 2m 46s
 - łączny czas wszystkich jobów ze strony Usage - 4m 20s
-Po workers:
+- - Po workers:
 - czas joba UI tests - 58s
 - łączny czas wszystkich jobów ze strony Usage - 2m 16s	
-Po Shardowaniu:
+- - Po Shardowaniu:
 - czas joba UI tests - 42s
 - łączny czas wszystkich jobów ze strony Usage -  3m 42s
-8 shards:
+- - 8 shards:
 - czas joba UI tests - 38s
 - łączny czas wszystkich jobów ze strony Usage - 5m 17s
 
