@@ -15,8 +15,8 @@ Zmiany, które wprowadziłem w pipeline:
 
 | Metryka | Przed | Po |
 |---|---|---|
-| Pipeline na pull request | 3m 46s | 1m 10s |
-| Job UI tests (najdłuższy shard) | 2m 27s | 24s (PR) / 33s (main) |
+| Pipeline na pull request | 2m 49s | 1m 10s |
+| Job UI tests | 2m 49s | 24s (PR) / 33s (main) |
 | Rozmiar raportu Playwright | 13,7 MB | 894 KB |
 
 > Przebieg na `main` wydłużył się z 3m 21s do 5m 45s — teraz obejmuje pełną regresję, skany bezpieczeństwa i publikację raportów (11 kontroli na PR zamiast 1), a nie tylko szybki feedback na pull requeście.
