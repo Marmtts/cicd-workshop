@@ -1,5 +1,28 @@
 # Szybki feedback w CI/CD — repozytorium warsztatowe
 
+[![CI](https://github.com/Marmtts/cicd-workshop/actions/workflows/ci.yml/badge.svg)](https://github.com/Marmtts/cicd-workshop/actions/workflows/ci.yml)
+
+## Moja część
+
+Repozytorium pochodzi z warsztatu *„Szybki feedback w CI/CD"* — aplikację i testy przygotował prowadzący (T. Klepacki), ja przebudowałem pipeline CI/CD w `.github/workflows/ci.yml`.
+
+Zmiany, które wprowadziłem w pipeline:
+- wybór testów API/UI tylko wg zmienionych plików (`dorny/paths-filter`)
+- sharding testów UI (2 shardy na PR, 8 na main/nightly), liczba shardów zależna od zdarzenia
+- zbiorczy raport JUnit (jeden check + job summary) zamiast osobnych artefaktów per shard
+- trace tylko dla nieudanych testów, zamiast nagrywania ich dla każdego przebiegu
+- skan zależności (`npm audit`) i sekretów (`gitleaks`), blokujący scalenie przy błędzie
+
+| Metryka | Przed | Po |
+|---|---|---|
+| Pipeline na pull request | 3m 46s | 1m 10s |
+| Job UI tests (najdłuższy shard) | 2m 27s | 24s (PR) / 33s (main) |
+| Rozmiar raportu Playwright | 13,7 MB | 894 KB |
+
+> Przebieg na `main` wydłużył się z 3m 21s do 5m 45s — teraz obejmuje pełną regresję, skany bezpieczeństwa i publikację raportów (11 kontroli na PR zamiast 1), a nie tylko szybki feedback na pull requeście.
+
+Pełne pomiary krok po kroku: [docs/baseline.md](docs/baseline.md).
+
 Aplikacja demonstracyjna i wyjściowy pipeline dla warsztatu *„Szybki feedback w CI/CD:
 jak zaprojektować pipeline, który buduje, testuje i wdraża bez utraty jakości”*.
 
@@ -29,11 +52,11 @@ npm run dev             # aplikacja na http://localhost:5173
 | `tests/unit/` | 78 testów jednostkowych (Vitest) |
 | `tests/api/` | 44 testy API (Playwright) |
 | `tests/ui/` | 123 testy UI — 5 oznaczonych `@smoke`, reszta to regresja |
-| `.github/workflows/ci.yml` | **wyjściowy pipeline — punkt startu warsztatu** |
-| `docs/baseline.md` | szablon pomiarów, który uzupełniasz w ZADANIU 01 |
+| `.github/workflows/ci.yml` | pipeline CI/CD — opis zmian w sekcji „Moja część” powyżej |
+| `docs/baseline.md` | pomiary z każdego etapu przebudowy pipeline'u |
 
-Zadania pojawiają się w trakcie warsztatu na branchu
-[`zadania`](https://github.com/tklepacki/cicd-fast-feedback-workshop/tree/zadania).
+Źródło: zadania pochodzą z warsztatu prowadzonego w repozytorium
+[tklepacki/cicd-fast-feedback-workshop](https://github.com/tklepacki/cicd-fast-feedback-workshop), branch `zadania`.
 
 ## Aplikacja
 
